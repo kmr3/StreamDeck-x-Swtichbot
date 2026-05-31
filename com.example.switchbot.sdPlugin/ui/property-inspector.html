@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SwitchBot Settings</title>
+    <link rel="stylesheet" href="./property-inspector.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>SwitchBot API</h1>
+        <p class="hint">
+          token と secret は SwitchBot アプリの Developer Options から取得できます。
+        </p>
+
+        <label>
+          Token
+          <input id="token" autocomplete="off" type="password" />
+        </label>
+
+        <label>
+          Secret
+          <input id="secret" autocomplete="off" type="password" />
+        </label>
+      </section>
+
+      <section>
+        <h2>Action</h2>
+
+        <label data-field="device">
+          Device
+          <select id="deviceId">
+            <option value="">デバイスを読み込み中...</option>
+          </select>
+        </label>
+
+        <label data-field="brightness">
+          Brightness
+          <input id="brightness" max="100" min="1" step="1" type="number" value="100" />
+        </label>
+
+        <label data-field="aircon-temperature">
+          Temperature
+          <input id="airconTemperature" max="30" min="16" step="1" type="number" value="26" />
+        </label>
+
+        <label data-field="aircon-fan-speed">
+          Fan Speed
+          <select id="airconFanSpeed">
+            <option value="1">Auto</option>
+            <option value="2">Low</option>
+            <option value="3">Medium</option>
+            <option value="4">High</option>
+          </select>
+        </label>
+
+        <label data-field="color">
+          Color
+          <input id="color" pattern="#[0-9a-fA-F]{6}" placeholder="#FFAA00" type="text" />
+        </label>
+
+        <label data-field="scene">
+          Scene ID
+          <input id="sceneId" autocomplete="off" type="text" />
+        </label>
+
+        <p id="status" role="status"></p>
+      </section>
+    </main>
+
+    <script src="./property-inspector.js"></script>
+  </body>
+</html>

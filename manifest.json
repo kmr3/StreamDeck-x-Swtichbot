@@ -1,0 +1,186 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "Controllers": ["Keypad"],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/power",
+      "Name": "Toggle",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/power",
+          "Title": "OFF"
+        },
+        {
+          "Image": "imgs/actions/power",
+          "Title": "ON"
+        }
+      ],
+      "Tooltip": "SwitchBot device ON/OFF toggle",
+      "UUID": "com.example.switchbot.toggle"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/power",
+      "Name": "Turn On",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/power",
+          "Title": "ON"
+        },
+        {
+          "Image": "imgs/actions/power",
+          "Title": "ON"
+        }
+      ],
+      "Tooltip": "Turn on a SwitchBot device",
+      "UUID": "com.example.switchbot.turn-on"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/power",
+      "Name": "Turn Off",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/power",
+          "Title": "OFF"
+        },
+        {
+          "Image": "imgs/actions/power",
+          "Title": "OFF"
+        }
+      ],
+      "Tooltip": "Turn off a SwitchBot device",
+      "UUID": "com.example.switchbot.turn-off"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/brightness",
+      "Name": "Set Brightness",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/brightness",
+          "Title": "Bright"
+        }
+      ],
+      "Tooltip": "Set light brightness from 1 to 100",
+      "UUID": "com.example.switchbot.set-brightness"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/color",
+      "Name": "Set Color",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/color",
+          "Title": "Color"
+        }
+      ],
+      "Tooltip": "Set light color with #RRGGBB",
+      "UUID": "com.example.switchbot.set-color"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/scene",
+      "Name": "Scene",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/scene",
+          "Title": "Scene"
+        }
+      ],
+      "Tooltip": "Execute a SwitchBot scene",
+      "UUID": "com.example.switchbot.scene"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/aircon",
+      "Name": "Aircon Cool",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/aircon",
+          "Title": "冷房\n26°C"
+        }
+      ],
+      "Tooltip": "Set air conditioner to cooling mode",
+      "UUID": "com.example.switchbot.aircon-cool"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/aircon",
+      "Name": "Aircon Heat",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/aircon",
+          "Title": "暖房\n22°C"
+        }
+      ],
+      "Tooltip": "Set air conditioner to heating mode",
+      "UUID": "com.example.switchbot.aircon-heat"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/temp-up",
+      "Name": "Aircon +1°C",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/temp-up",
+          "Title": "+1°C"
+        }
+      ],
+      "Tooltip": "Increase remembered air conditioner temperature by 1°C",
+      "UUID": "com.example.switchbot.aircon-temp-up"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/temp-down",
+      "Name": "Aircon -1°C",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/temp-down",
+          "Title": "-1°C"
+        }
+      ],
+      "Tooltip": "Decrease remembered air conditioner temperature by 1°C",
+      "UUID": "com.example.switchbot.aircon-temp-down"
+    }
+  ],
+  "Author": "Example",
+  "Category": "SwitchBot",
+  "CategoryIcon": "imgs/category",
+  "CodePath": "bin/plugin.js",
+  "Description": "Unofficial SwitchBot API v1.1 controls for Stream Deck.",
+  "Icon": "imgs/plugin",
+  "Name": "SwitchBot",
+  "Nodejs": {
+    "Version": "24"
+  },
+  "OS": [
+    {
+      "MinimumVersion": "12",
+      "Platform": "mac"
+    },
+    {
+      "MinimumVersion": "10",
+      "Platform": "windows"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "UUID": "com.example.switchbot",
+  "Version": "1.0.0.0"
+}

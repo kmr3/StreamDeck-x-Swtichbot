@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+*.log
+npm-debug.log*
+.DS_Store
+com.example.switchbot.sdPlugin/bin/
+com.example.switchbot.sdPlugin/logs/
