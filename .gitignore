@@ -10,6 +10,6 @@ npm-debug.log*
 *.tsbuildinfo
 .idea/
 .vscode/
-manifest.json
+/manifest.json
 *.sdPlugin/bin/
 *.sdPlugin/logs/

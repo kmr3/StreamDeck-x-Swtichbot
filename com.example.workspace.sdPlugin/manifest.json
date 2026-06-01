@@ -1,0 +1,140 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/window-left",
+      "Name": "Left Half",
+      "States": [
+        {
+          "Image": "imgs/actions/window-left",
+          "Title": "Left"
+        }
+      ],
+      "Tooltip": "Move the active window to the left half of the screen",
+      "UUID": "com.example.workspace.window-left"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/window-right",
+      "Name": "Right Half",
+      "States": [
+        {
+          "Image": "imgs/actions/window-right",
+          "Title": "Right"
+        }
+      ],
+      "Tooltip": "Move the active window to the right half of the screen",
+      "UUID": "com.example.workspace.window-right"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/window-maximize",
+      "Name": "Work Area Max",
+      "States": [
+        {
+          "Image": "imgs/actions/window-maximize",
+          "Title": "Max"
+        }
+      ],
+      "Tooltip": "Resize the active window to the usable screen area",
+      "UUID": "com.example.workspace.window-maximize"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/codex",
+      "Name": "Open Codex",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/codex",
+          "Title": "Codex"
+        }
+      ],
+      "Tooltip": "Open Codex for the configured workspace",
+      "UUID": "com.example.workspace.open-codex"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/chatgpt",
+      "Name": "Open ChatGPT",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/chatgpt",
+          "Title": "ChatGPT"
+        }
+      ],
+      "Tooltip": "Open the ChatGPT app, or chatgpt.com if the app is unavailable",
+      "UUID": "com.example.workspace.open-chatgpt"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/git",
+      "Name": "Git Status",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/git",
+          "Title": "Git"
+        }
+      ],
+      "Tooltip": "Show a compact git status for the configured workspace",
+      "UUID": "com.example.workspace.git-status"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/git-diff",
+      "Name": "Copy Git Diff",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/git-diff",
+          "Title": "Diff"
+        }
+      ],
+      "Tooltip": "Copy git diff stats for the configured workspace",
+      "UUID": "com.example.workspace.git-diff"
+    },
+    {
+      "Controllers": ["Keypad"],
+      "Icon": "imgs/actions/wezterm",
+      "Name": "Open WezTerm",
+      "PropertyInspectorPath": "ui/property-inspector.html",
+      "States": [
+        {
+          "Image": "imgs/actions/wezterm",
+          "Title": "Wez"
+        }
+      ],
+      "Tooltip": "Open WezTerm in the configured workspace",
+      "UUID": "com.example.workspace.open-wezterm"
+    }
+  ],
+  "Author": "Example",
+  "Category": "Workspace",
+  "CategoryIcon": "imgs/category",
+  "CodePath": "bin/plugin.js",
+  "Description": "Window, app launch, and git helper actions for Stream Deck.",
+  "Icon": "imgs/plugin",
+  "Name": "Workspace Buttons",
+  "Nodejs": {
+    "Version": "24"
+  },
+  "OS": [
+    {
+      "MinimumVersion": "12",
+      "Platform": "mac"
+    },
+    {
+      "MinimumVersion": "10",
+      "Platform": "windows"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "UUID": "com.example.workspace",
+  "Version": "1.0.0.0"
+}

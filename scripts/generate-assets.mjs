@@ -3,6 +3,7 @@ import { Buffer } from "node:buffer";
 import { deflateSync } from "node:zlib";
 
 await mkdir("com.example.switchbot.sdPlugin/imgs/actions", { recursive: true });
+await mkdir("com.example.workspace.sdPlugin/imgs", { recursive: true });
 
 const icons = {
   "com.example.switchbot.sdPlugin/imgs/actions/aircon.svg": airconIcon(),
@@ -21,6 +22,8 @@ for (const [path, svg] of Object.entries(icons)) {
 
 await writeFile("com.example.switchbot.sdPlugin/imgs/plugin.png", createPng(256, 256));
 await writeFile("com.example.switchbot.sdPlugin/imgs/plugin@2x.png", createPng(512, 512));
+await writeFile("com.example.workspace.sdPlugin/imgs/plugin.png", createPng(256, 256));
+await writeFile("com.example.workspace.sdPlugin/imgs/plugin@2x.png", createPng(512, 512));
 
 function powerIcon() {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><path fill="#fff" d="M33 8h6v28h-6z"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6" d="M24 18a24 24 0 1 0 24 0"/></svg>`;

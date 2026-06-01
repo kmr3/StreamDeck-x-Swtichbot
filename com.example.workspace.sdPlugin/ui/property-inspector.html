@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workspace Settings</title>
+    <link rel="stylesheet" href="./property-inspector.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Workspace</h1>
+        <p class="hint">Codex と Git ボタンで使う作業フォルダです。</p>
+
+        <label data-field="workspace">
+          Workspace Folder
+          <input id="workspacePath" autocomplete="off" type="text" />
+        </label>
+      </section>
+
+      <section data-section="app">
+        <h2>App</h2>
+
+        <label data-field="app-name">
+          Application Name
+          <input id="appName" autocomplete="off" type="text" />
+        </label>
+
+        <label data-field="chatgpt-url">
+          Fallback URL
+          <input id="chatGptUrl" autocomplete="off" type="url" />
+        </label>
+      </section>
+    </main>
+
+    <script src="./property-inspector.js"></script>
+  </body>
+</html>
+

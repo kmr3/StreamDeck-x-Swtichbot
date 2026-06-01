@@ -28,4 +28,13 @@ export default [
     },
     plugins: createPlugins("com.example.switchbot.sdPlugin/bin"),
   },
+  {
+    input: "src/workspace/plugin.ts",
+    output: {
+      file: "com.example.workspace.sdPlugin/bin/plugin.js",
+      format: "esm",
+      sourcemap: true,
+    },
+    plugins: createPlugins("com.example.workspace.sdPlugin/bin"),
+  },
 ];

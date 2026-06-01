@@ -5,6 +5,11 @@ HMAC-SHA256 signing flow and the official `@elgato/streamdeck` SDK.
 
 Plugin UUID: `com.example.switchbot`
 
+This repository also contains a separate local productivity plugin:
+
+- Workspace Buttons UUID: `com.example.workspace`
+- Plugin folder: `com.example.workspace.sdPlugin`
+
 ## Actions
 
 - Toggle: reads `/v1.1/devices/{deviceId}/status` and flips `turnOn` / `turnOff`
@@ -59,14 +64,30 @@ npm run lint
 npm run test
 npm run build
 streamdeck link com.example.switchbot.sdPlugin
+streamdeck link com.example.workspace.sdPlugin
 ```
+
+## Workspace Buttons
+
+The Workspace plugin is separate from SwitchBot and adds local helper buttons:
+
+- Left Half: moves the active window to the left half of the usable screen area
+- Right Half: moves the active window to the right half of the usable screen area
+- Work Area Max: fills the usable screen area without using macOS fullscreen
+- Open Codex: opens Codex with the configured workspace folder
+- Open ChatGPT: opens the ChatGPT app, or `https://chatgpt.com` as a fallback
+- Git Status: shows a compact branch/change count on the key
+- Copy Git Diff: copies `git diff --stat` to the clipboard
+- Open WezTerm: opens WezTerm in the configured workspace folder
+
+Window controls may require macOS Accessibility permission for Stream Deck.
 
 ## Notes
 
 - Requires Node.js 24+, Stream Deck 7.1+, macOS 12+ or Windows 10+.
 - Uses `https://api.switch-bot.com` and only `/v1.1/*` endpoints.
-- SwitchBot has a daily request limit. HTTP 429 and API status code 190 are
-  logged as rate-limit warnings.
+- SwitchBot has a daily request limit. HTTP 429 is logged as a rate-limit
+  warning, while API status code 190 keeps the API message for debugging.
 
 ## License
 

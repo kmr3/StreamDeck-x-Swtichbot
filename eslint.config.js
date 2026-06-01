@@ -4,7 +4,13 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   js.configs.recommended,
   {
-    ignores: ["com.example.switchbot.sdPlugin/**", "coverage/**", "dist/**", "node_modules/**"],
+    ignores: [
+      "com.example.switchbot.sdPlugin/**",
+      "com.example.workspace.sdPlugin/**",
+      "coverage/**",
+      "dist/**",
+      "node_modules/**",
+    ],
   },
   {
     files: ["src/**/*.ts", "test/**/*.ts"],
