@@ -4,5 +4,12 @@ coverage/
 *.log
 npm-debug.log*
 .DS_Store
-com.example.switchbot.sdPlugin/bin/
-com.example.switchbot.sdPlugin/logs/
+.env
+.env.*
+*.local
+*.tsbuildinfo
+.idea/
+.vscode/
+manifest.json
+*.sdPlugin/bin/
+*.sdPlugin/logs/

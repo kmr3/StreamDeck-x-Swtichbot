@@ -178,7 +178,7 @@ function apiError(statusCode: number, message = "SwitchBot API request failed.")
     return new SwitchBotError("auth", "SwitchBot authentication failed.", { statusCode });
   }
 
-  if (statusCode === 190 || normalized.includes("limit") || normalized.includes("too many")) {
+  if (normalized.includes("limit") || normalized.includes("too many")) {
     return new SwitchBotError("rate-limit", "SwitchBot rate limit reached.", { statusCode });
   }
 

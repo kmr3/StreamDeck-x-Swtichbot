@@ -46,7 +46,9 @@ async function sendDeviceListToPropertyInspector(): Promise<void> {
       devices: devices.map((device) => ({
         deviceId: device.deviceId,
         deviceName: device.deviceName,
+        isInfraredRemote: device.deviceType === undefined,
         deviceType: device.deviceType ?? device.remoteType ?? "Unknown",
+        remoteType: device.remoteType,
       })),
       request: "listDevices",
       status: "ok",

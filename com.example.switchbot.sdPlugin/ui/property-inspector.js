@@ -139,14 +139,38 @@ function renderDevices(payload) {
     return;
   }
 
+  const devices = isAirconAction()
+    ? (payload.devices ?? []).filter(
+        (device) => device.isInfraredRemote && isAirconRemoteType(device.remoteType),
+      )
+    : (payload.devices ?? []);
+
   const options = [new Option("デバイスを選択", "")];
-  for (const device of payload.devices ?? []) {
+  for (const device of devices) {
     options.push(new Option(`${device.deviceName} (${device.deviceType})`, device.deviceId));
   }
 
   controls.deviceId.replaceChildren(...options);
   controls.deviceId.value = settings.deviceId ?? "";
-  controls.status.textContent = options.length > 1 ? "" : "デバイスが見つかりませんでした";
+  controls.status.textContent =
+    options.length > 1
+      ? ""
+      : isAirconAction()
+        ? "Air Conditioner の赤外線リモコンが見つかりませんでした"
+        : "デバイスが見つかりませんでした";
+}
+
+function isAirconRemoteType(remoteType) {
+  return remoteType === "Air Conditioner" || remoteType === "DIY Air Conditioner";
+}
+
+function isAirconAction() {
+  return [
+    ACTIONS.AIRCON_COOL,
+    ACTIONS.AIRCON_HEAT,
+    ACTIONS.AIRCON_TEMP_DOWN,
+    ACTIONS.AIRCON_TEMP_UP,
+  ].includes(action);
 }
 
 function sendToPlugin(payload) {
